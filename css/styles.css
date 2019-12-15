@@ -1,0 +1,32 @@
+body {
+  background-color: #00796b;
+  color: #e0f2f1;
+}
+
+
+button.btn.btn-primary {
+
+ background-color: teal;
+
+}
+
+ul.collection{
+
+	background-color: #64ffda;
+
+
+}
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #e0f2f1 ;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #e0f2f1 ;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #e0f2f1 ;
+}

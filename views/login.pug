@@ -1,0 +1,25 @@
+extends layout
+
+block content
+
+  <nav class="teal">
+    <div class="nav-wrappe container">
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="/">Index</a></li>
+        <li><a href="/register">Register</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  h1.center.flow-text Welcome to bloggin service
+
+  div.container.center.login-container
+      h2.flow-text Please log in or register
+      form(method='POST' action='/login')
+                  div.form-group
+                    label(for='content')
+                    input#content.form-control(type='text', placeholder='Email' name='email')
+                  div.form-group
+                    label(for='content')
+                    input#content.form-control(type='password', placeholder='Password' name='password')
+                  button.btn.left.btn-primary(type='submit') Log in

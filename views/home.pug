@@ -1,0 +1,43 @@
+extends layout
+
+block content
+
+  <nav class="teal">
+    <div class="nav-wrappe container">
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/otherUserList">Other Users</a></li>
+        <li><a href="/logout">Log out</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  div.container.s1.make-post-container
+
+    <div class="row">
+      h2.flow-text= title
+      form(method='POST' action='/createPost')
+                div.form-group
+                  label(for='content')
+                  input#content.form-control(type='text', placeholder='Submit new message. Maximum length is 254.' name='content')
+                button.btn.left.btn-primary(type='submit') Submit
+
+    </div>
+      <ul class="collection">
+
+        each post in post_list
+          li(class="collection-item teal") [#{post.time}] #{post.author} says: #{post.content}
+
+        else
+          li(class="collection-item teal") There are no posts yet.
+
+      </ul>
+    </div>
+
+
+
+
+
+
+
+        
+

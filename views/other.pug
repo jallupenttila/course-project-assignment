@@ -1,0 +1,29 @@
+extends layout
+
+block content
+
+	<nav class="teal">
+		<div class="nav-wrappe container">
+			<ul id="nav-mobile" class="left hide-on-med-and-down">
+				<li><a href="/home">Home</a></li>
+				<li><a href="/otherUserList">Search</a></li>
+				<li><a href="/logout">Log out</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	
+
+	div.container.s1.post-list-container
+
+		h1.flow-text= title
+
+		<ul class="collection">
+
+			each post in post_list
+				li(class="collection-item teal") [#{post.time}] #{post.author} says: #{post.content}
+
+			else
+				li There are no posts yet or user not found.
+		</ul>
+
