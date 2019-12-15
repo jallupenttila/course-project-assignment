@@ -13,7 +13,7 @@ var createError = require('http-errors');
 var path = require('path');
 var routes = require('./routes/routes');
 
-// This is for the session control
+// This is for the session control, borrowed from the youtube video (reference 1 in documentation)
 
 const TWO_HOURS = 1000 * 60 * 60 * 2
 
@@ -27,7 +27,7 @@ const {
 
 const IN_PROD = NODE_ENV === 'production'
 
-
+// Define app, use express
 const app = express()
 
 //MongoDB connection using Mongoose
